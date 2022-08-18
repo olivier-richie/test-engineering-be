@@ -1,0 +1,18 @@
+type People {
+	id: ID!,
+	name: String,
+	height: String,
+	mass: String,
+	gender: String,
+	homeWorld: String
+}
+
+type Query {
+	peoples(count: Int):[People]
+	people(id: ID):People
+	getAll:[People]
+}
+
+type Mutation {
+	createPeople(name: String!, height: String!, mass: String, gender: String, homeWorld: String):People
+}
